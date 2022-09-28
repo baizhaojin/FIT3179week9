@@ -25,7 +25,7 @@
     "color": {
       "field": "growth rate",
       "type": "quantitative",
-      "scale": {"type": "linear"}
+      "scale": {"type": null}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "provinces"},
