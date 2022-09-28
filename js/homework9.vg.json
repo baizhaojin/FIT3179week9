@@ -10,7 +10,7 @@
   },
   "transform": [
     {
-      "lookup": "properties.name",
+      "lookup": "properties.NAME",
       "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/baizhaojin/FIT3179week9/main/data/gdp_2022.csv"
@@ -29,7 +29,7 @@
       "scale": {"type": "log"}
     },
     "tooltip": [
-      {"field": "properties.name", "type": "nominal", "title": "provinces"},
+      {"field": "properties.NAME", "type": "nominal", "title": "provinces"},
       {"field": "growth rate", "type": "quantitative"}
     ]
   }
