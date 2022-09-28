@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Mainland China's gdp growth rate by province in the first half of 2022",
+  "width": 800,
+  "height": 400,
+  "projection": {"type": "equalEarth"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/baizhaojin/FIT3179week9/main/js/ne_10m_admin_1_states_provinces.topojson",
+    "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.NAME",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/baizhaojin/FIT3179week9/main/data/gdp_2022.csv"
+        },
+        "key": "provinces",
+        "fields": ["growth rate"]
+      }
+    },
+    {"calculate": "datum.growth rate + 0.1", "as": "Growth Rate"}
+  ],
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "Growth Rate",
+      "type": "quantitative",
+      "scale": {"type": "log"}
+    },
+    "tooltip": [
+      {"field": "properties.NAME", "type": "nominal", "title": "provinces"},
+      {"field": "growth rate", "type": "quantitative"}
+    ]
+  }
+}
