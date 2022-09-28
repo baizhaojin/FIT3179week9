@@ -29,7 +29,7 @@
       "scale": {"type": "log"}
     },
     "tooltip": [
-      {"field": "properties.NAME", "type": "nominal", "title": "provinces"},
+      {"field": "properties.name", "type": "nominal", "title": "provinces"},
       {"field": "growth rate", "type": "quantitative"}
     ]
   }
