@@ -18,7 +18,8 @@
         "key": "provinces",
         "fields": ["growth rate"]
       }
-    }
+    },
+    {"calculate": "datum.growth rate + 0.1", "as": "growth rate"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
