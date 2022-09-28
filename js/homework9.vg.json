@@ -19,18 +19,18 @@
         "fields": ["growth rate"]
       }
     },
-    {"calculate": "datum.growth rate + 0.1", "as": "growth rate"}
+    {"calculate": "datum.growth rate + 0.1", "as": "Growth Rate"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "growth rate",
+      "field": "Growth Rate",
       "type": "quantitative",
       "scale": {"type": "log"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "provinces"},
-      {"field": "gdp 2022", "type": "quantitative"}
+      {"field": "growth rate", "type": "quantitative"}
     ]
   }
 }
