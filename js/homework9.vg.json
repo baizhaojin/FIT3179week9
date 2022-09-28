@@ -10,7 +10,7 @@
   },
   "transform": [
     {
-      "lookup": "properties.NAME",
+      "lookup": "properties.name",
       "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/baizhaojin/FIT3179week9/main/data/gdp_2022.csv"
